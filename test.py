@@ -9,8 +9,8 @@ best_score = -np.inf
 load_checkpoint = True
 n_games = 1
 agent = Agent(gamma=0.99, epsilon=0.1, lr=0.0001, input_dims=(env.observation_space.shape),
-              n_actions=(env.action_space.n), mem_size=50000, eps_min=0.1, batch_size=32,
-              replace=1000, eps_dec=1e-5, checkpoint_dir='models/', algo='DDQNAgent',
+              n_actions=(env.action_space.n), mem_size=1, eps_min=0.1, batch_size=32,
+              replace=1000, eps_dec=1e-5, checkpoint_dir='models/', algo='DuelingDQNAgent',
               env_name='PongNoFrameskip-v4')
 
 agent.load_models()
